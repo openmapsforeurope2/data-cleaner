@@ -1,0 +1,27 @@
+{
+    "db":{
+        "host":"SMWPERMEGMFT1",
+        "port":"5432",
+        "name":"ome2_v0",
+        "user":"postgres",
+        "pwd":"postgres"
+    },
+    "landmask": {
+        "country_field": "country",
+        "schema": "ome2_ib",
+        "table": "national_admin_extent"
+    },
+    "data": {
+        "country_field": "country",
+        "step_field": "w_step",
+        "themes": {
+            "tn": {
+                "schema": "ome2_tn",
+                "w_schema": "public",
+                "tables": [
+                    "road_link_w"
+                ]
+            }
+        }
+    } 
+}
