@@ -13,7 +13,6 @@
     },
     "data": {
         "country_field": "country",
-        "step_field": "w_step",
         "themes": {
             "tn": {
                 "schema": "ome2_tn",
