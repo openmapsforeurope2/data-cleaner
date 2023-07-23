@@ -20,8 +20,8 @@ def transform(argv):
     args = ""
     
     try:
-        opts, args = getopt.getopt(argv[1:], "hc:T:t:vr", ["help",
-        "conf=", "theme=", "verbose", "reset"])
+        opts, args = getopt.getopt(argv[1:], "hc:d:T:t:vr", ["help",
+        "conf=", "dist=", "theme=", "verbose", "reset"])
     except:
         print(arg_help)
         sys.exit(2)
