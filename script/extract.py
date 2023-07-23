@@ -8,7 +8,7 @@ def getTableName(schema , tableName):
     return (schema+"." if schema else "") + tableName
 
 def run(
-    conf, theme, tables, countryCodes, verbose
+    conf, dist, theme, tables, countryCodes, verbose
 ):
     conn = psycopg2.connect(  user = conf['db']['user'],
                                     password = conf['db']['pwd'],
@@ -20,7 +20,7 @@ def run(
     print("CLEANING...", flush=True)
 
     for c in countryCodes:
-        landmask_statement = "SELECT ST_Union(ARRAY(SELECT geom FROM "+ getTableName(conf['landmask']['schema'], conf['landmask']['table']) +" WHERE "+conf['landmask']["country_field"]+"='"+c+"'))"
+        landmask_statement = "SELECT ST_Union(ARRAY(SELECT geom FROM "+ getTableName(conf['landmask']['schema'], conf['landmask']['table']) +" WHERE "+conf['landmask']["fields"]["country"]+"='"+c+"'))"
 
         w_schema = conf['data']['themes'][theme]['w_schema']
         if not tables:
@@ -28,8 +28,9 @@ def run(
 
         for tb in tables:
             query = "DELETE FROM "+getTableName(w_schema, tb)
-            query += " WHERE "+conf['data']["country_field"]+"='"+c+"'"
+            query += " WHERE "+conf['data']["fields"]["country"]+"='"+c+"'"
             query += " AND NOT ST_intersects(("+landmask_statement+"), geom)"
+            query += " AND ST_Distance(("+landmask_statement+"), geom) > "+dist
 
             print(u'query: {}'.format(query), flush=True)
             cursor.execute(query)

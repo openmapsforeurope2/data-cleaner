@@ -1,24 +1,43 @@
 {
     "db":{
-        "host":"SMWPERMEGMFT1",
+        "host":"SMLPOPENMAPS2",
         "port":"5432",
-        "name":"ome2_v0",
-        "user":"postgres",
-        "pwd":"postgres"
+        "name":"ome2_hvlsp_v1",
+        "user":"ome2_user",
+        "pwd":"ome2_user"
     },
     "landmask": {
-        "country_field": "country",
-        "schema": "ome2_ib",
-        "table": "national_admin_extent"
+        "schema": "ib",
+        "table": "national_admin_extent",
+        "fields":{
+            "country": "country"
+        }
+    },
+    "boundary": {
+        "schema": "ib",
+        "table": "international_boundary_line",
+        "fields":{
+            "country": "country",
+            "geometry": "geom",
+            "type": "boundary_type"
+        },
+        "boundary_type_values":{
+            "international": "international_boundary"
+        }
+    },
+    "working": {
+        "suffix": "_w"
     },
     "data": {
-        "country_field": "country",
+        "fields":{
+            "country": "country"
+        },
         "themes": {
             "tn": {
-                "schema": "ome2_tn",
+                "schema": "tn",
                 "w_schema": "public",
                 "tables": [
-                    "road_link_w"
+                    "road_link"
                 ]
             }
         }
