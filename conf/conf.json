@@ -25,22 +25,22 @@
                 "schema": "tn",
                 "w_schema": "public",
                 "tables": [
-                    "road_link",
-                    "road",
-                    "road_node",
-                    "road_service_point",
-                    "road_service_area",
-                    "marker_post",
-                    "railway_link",
-                    "railway_line",
-                    "railway_station_point",
-                    "railway_station_area",
-                    "aerodrome_point",
-                    "aerodrome_area",
-                    "runway",
-                    "ferry_crossing",
-                    "port_point",
-                    "port_area"
+                    "road_link_w",
+                    "road_w",
+                    "road_node_w",
+                    "road_service_point_w",
+                    "road_service_area_w",
+                    "marker_post_w",
+                    "railway_link_w",
+                    "railway_line_w",
+                    "railway_station_point_w",
+                    "railway_station_area_w",
+                    "aerodrome_point_w",
+                    "aerodrome_area_w",
+                    "runway_w",
+                    "ferry_crossing_w",
+                    "port_point_w",
+                    "port_area_w"
                 ]
             }
         }
