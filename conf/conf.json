@@ -2,13 +2,13 @@
     "db":{
         "host":"SMLPOPENMAPS2",
         "port":"5432",
-        "name":"ome2_hvlsp_v2",
+        "name":"ome2_hvlsp_v4",
         "user":"ome2_user",
         "pwd":"ome2_user"
     },
     "landmask": {
         "schema": "au",
-        "table": "administrative_unit_1",
+        "table": "administrative_unit_area_1",
         "fields":{
             "country": "country"
         }
