@@ -2,13 +2,13 @@
     "db":{
         "host":"SMLPOPENMAPS2",
         "port":"5432",
-        "name":"ome2_hvlsp_v1",
+        "name":"ome2_hvlsp_v4",
         "user":"ome2_user",
         "pwd":"ome2_user"
     },
     "landmask": {
-        "schema": "ib",
-        "table": "national_admin_extent",
+        "schema": "au",
+        "table": "administrative_unit_area_1",
         "fields":{
             "country": "country"
         }
@@ -25,7 +25,22 @@
                 "schema": "tn",
                 "w_schema": "public",
                 "tables": [
-                    "road_link"
+                    "road_link_w",
+                    "road_w",
+                    "road_node_w",
+                    "road_service_point_w",
+                    "road_service_area_w",
+                    "marker_post_w",
+                    "railway_link_w",
+                    "railway_line_w",
+                    "railway_station_point_w",
+                    "railway_station_area_w",
+                    "aerodrome_point_w",
+                    "aerodrome_area_w",
+                    "runway_w",
+                    "ferry_crossing_w",
+                    "port_point_w",
+                    "port_area_w"
                 ]
             },
             "hy": {
