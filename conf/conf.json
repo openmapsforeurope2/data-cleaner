@@ -27,6 +27,13 @@
                 "tables": [
                     "road_link"
                 ]
+            },
+            "hy": {
+                "schema": "hy",
+                "w_schema": "public",
+                "tables": [
+                    "watercourse_link"
+                ]
             }
         }
     } 
