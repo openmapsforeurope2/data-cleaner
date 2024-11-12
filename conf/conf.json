@@ -17,7 +17,7 @@
         "themes": {
             "tn": {
                 "schema": "tn",
-                "w_schema": "public",
+                "w_schema": "wk",
                 "tables": [
                     "road_link_w",
                     "road_w",
@@ -39,7 +39,7 @@
             },
             "hy": {
                 "schema": "hy",
-                "w_schema": "public",
+                "w_schema": "wk",
                 "tables": [
                     "watercourse_link"
                 ]

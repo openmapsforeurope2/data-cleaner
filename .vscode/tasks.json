@@ -1,0 +1,18 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "remove containers",
+            "type": "shell",
+            "command": "docker rm -f $(docker ps -a -q)",
+            "problemMatcher": []
+        },
+        {
+            "label": "run the code (clean)",
+            "type": "shell",
+            "command": "docker run --privileged data-cleaner python3 script/clean.py -c conf.json -d 5 -T tn -t road_link_w be",
+            "group": "build",
+            "problemMatcher": []
+        }
+    ]
+}

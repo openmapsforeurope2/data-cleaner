@@ -33,7 +33,11 @@ def run(
             query += " AND ST_Distance(("+landmask_statement+"), geom) > "+dist
 
             print(u'query: {}'.format(query), flush=True)
-            cursor.execute(query)
+            try:
+                cursor.execute(query)
+            except Exception as e:
+                print(e)
+                raise
             conn.commit()
 
     cursor.close()
