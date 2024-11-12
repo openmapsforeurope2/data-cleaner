@@ -31,7 +31,8 @@
                     "railway_station_area_w",
                     "aerodrome_point_w",
                     "aerodrome_area_w",
-                    "runway_w",
+                    "runway_line_w",
+                    "runway_area_w",
                     "ferry_crossing_w",
                     "port_point_w",
                     "port_area_w"
