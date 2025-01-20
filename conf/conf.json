@@ -42,7 +42,23 @@
                 "schema": "hy",
                 "w_schema": "wk",
                 "tables": [
-                    "watercourse_link"
+                    "dam_area_w",
+                    "dam_line_w",
+                    "dam_point_w",
+                    "drainage_basin_w",
+                    "falls_area_w",
+                    "falls_line_w",
+                    "falls_point_w",
+                    "hydro_node_w",
+                    "lock_area_w",
+                    "lock_line_w",
+                    "lock_point_w",
+                    "shore_w",
+                    "shoreline_w",
+                    "standing_water_w",
+                    "watercourse_w",
+                    "watercourse_area_w",
+                    "watercourse_link_"
                 ]
             }
         }
